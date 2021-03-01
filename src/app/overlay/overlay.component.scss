@@ -102,8 +102,10 @@ tui-root {
   border-radius: 4px;
   text-transform: uppercase;
   margin-left: auto;
-  cursor: not-allowed;
+  display: flex;
   pointer-events: none;
+  align-items: center;
+  justify-content: center;
   &.enabled {
     border-color: white;
     cursor: pointer;
