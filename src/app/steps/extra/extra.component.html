@@ -1,0 +1,67 @@
+<form [formGroup]="extraFormGroup">
+  <p>Gender</p>
+  <div tuiGroup [collapsed]="true" class="sex">
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="gender"
+      item="male"
+      size="l"
+    >
+      Male
+    </tui-radio-block>
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="gender"
+      item="female"
+      size="l"
+    >
+      Female
+    </tui-radio-block>
+  </div>
+  <tui-input-date
+    tuiUnfinishedValidator="Finish filling the field"
+    formControlName="dob"
+    [min]="minDate"
+    [max]="maxDate"
+  >
+    Enter your date of birth
+  </tui-input-date>
+
+  <div tuiGroup class="group">
+    <div class="name">
+      <tui-select formControlName="state">
+        State
+        <tui-data-list-wrapper
+          *tuiDataList
+          [items]="states"
+        ></tui-data-list-wrapper>
+      </tui-select>
+    </div>
+    <div class="name">
+      <tui-input
+        formControlName="lga">
+        LGA
+      </tui-input>
+    </div>
+  </div>
+
+  <p>Employment Status</p>
+  <div tuiGroup [collapsed]="true" class="employ">
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="employmentStatus"
+      item="employed"
+      size="l"
+    >
+      Employed
+    </tui-radio-block>
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="employmentStatus"
+      item="self-employed"
+      size="l"
+    >
+      Self-Employed
+    </tui-radio-block>
+  </div>
+</form>

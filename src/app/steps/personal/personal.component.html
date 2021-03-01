@@ -1,0 +1,41 @@
+<form [formGroup]="personalFormGroup">
+  <div tuiGroup class="group">
+    <div class="name">
+      <tui-input
+        formControlName="firstName"
+        tuiTextfieldExampleText="Adamu">
+        First Name
+      </tui-input>
+    </div>
+    <div class="name">
+      <tui-input
+        formControlName="middleName"
+        tuiTextfieldExampleText="Bose">
+        Middle Name
+      </tui-input>
+    </div>
+  </div>
+  <div class="name">
+    <tui-input
+      formControlName="lastName"
+      tuiTextfieldExampleText="Chinedu">
+      Last Name
+    </tui-input>
+  </div>
+  <div class="name">
+    <tui-input
+      formControlName="email"
+      tuiTextfieldExampleText="abc@gmail.com">
+      Email
+    </tui-input>
+  </div>
+  <div class="name">
+    <tui-input-phone
+      formControlName="phone"
+      countryCode="+234"
+      phoneMaskAfterCountryCode="(###)###-###-##"
+      tuiTextfieldExampleText="08038707175">
+      Phone
+    </tui-input-phone>
+  </div>
+</form>

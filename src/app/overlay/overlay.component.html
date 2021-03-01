@@ -1,0 +1,38 @@
+<div class="__container">
+  <div class="modal">
+    <img class="logo" src="https://uploads-ssl.webflow.com/5ec172593f3725689f22aaf2/5ec46cab55b53e5bb74e9a83_renmoney_logo.svg" alt="logo">
+    <tui-root>
+      <ng-container *ngIf="currentStep$ | async as step">
+        <ng-container [ngSwitch]="step.stepIndex">
+          <ng-container *ngSwitchCase="1">
+            <rm-welcome></rm-welcome>
+          </ng-container>
+          <ng-container *ngSwitchCase="2">
+            <rm-bvn></rm-bvn>
+          </ng-container>
+          <ng-container *ngSwitchCase="3">
+            <rm-personal></rm-personal>
+          </ng-container>
+          <ng-container *ngSwitchCase="4">
+            <rm-extra></rm-extra>
+          </ng-container>
+          <ng-container *ngSwitchCase="5">
+            <rm-address></rm-address>
+          </ng-container>
+          <ng-container *ngSwitchCase="6">
+            <rm-employment></rm-employment>
+          </ng-container>
+        </ng-container>
+        <div class="action-btns">
+          <div (click)="previous()" *ngIf="showPreviousButton()" class="previous action-btn"></div>
+          <ng-container *ngIf="showNextButton()">
+            <div (click)="proceed()" [class.enabled]="canProceed$ | async" class="next action-btn"></div>
+          </ng-container>
+          <ng-container *ngIf="showSubmitButton()" class="done">
+            <div (click)="submit()" [class.enabled]="canProceed$ | async" class="done">Submit</div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </tui-root>
+  </div>
+</div>

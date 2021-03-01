@@ -1,0 +1,10 @@
+<div class="bvn-input">
+  <tui-input
+    tuiHintContent="It will be used validating you identity"
+    [tuiTextfieldCleaner]="true"
+    [tuiTextfieldInputMode]="inputMode"
+    [formControl]="bvnControl">
+    Enter your BVN
+  </tui-input>
+  <tui-field-error [formControl]="bvnControl"></tui-field-error>
+</div>

@@ -1,0 +1,34 @@
+<form [formGroup]="employmentFormGroup">
+  <div class="employer">
+    <tui-input
+      formControlName="employer"
+      tuiTextfieldExampleText="Shell Oil">
+      Employer's Name
+    </tui-input>
+  </div>
+  <tui-select formControlName="employerSector">
+    Employer Sector
+    <tui-data-list-wrapper
+      *tuiDataList
+      [items]="sectors"
+    ></tui-data-list-wrapper>
+  </tui-select>
+  <tui-input-date
+    tuiUnfinishedValidator="Finish filling the field"
+    formControlName="employmentStartDate"
+  >
+    Employment Start Date
+  </tui-input-date>
+  <div class="officeAddress">
+    <tui-input
+      formControlName="officeAddress">
+      Office Address
+    </tui-input>
+  </div>
+  <div class="workEmail">
+    <tui-input
+      formControlName="workEmail">
+      Work Email
+    </tui-input>
+  </div>
+</form>

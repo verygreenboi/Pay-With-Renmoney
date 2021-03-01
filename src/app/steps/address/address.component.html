@@ -1,0 +1,61 @@
+<form [formGroup]="addressFormGroup">
+  <p>Residential Status</p>
+  <div class="address" tuiGroup>
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="residentialStatus"
+      item="owner"
+      size="l"
+    >
+      Owner
+    </tui-radio-block>
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="residentialStatus"
+      item="renting"
+      size="l"
+    >
+      Renting
+    </tui-radio-block>
+  </div>
+  <div class="current-address">
+    <tui-input formControlName="address">
+      Current Address
+    </tui-input>
+  </div>
+  <tui-input-date
+    tuiUnfinishedValidator="Finish filling the field"
+    formControlName="dateMovedIn"
+  >
+    When did you move in?
+  </tui-input-date>
+  <span class="__divider"></span>
+  <p>Marital Status</p>
+  <div class="marital" tuiGroup>
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="maritalStatus"
+      item="single"
+      size="l"
+    >
+      Single
+    </tui-radio-block>
+    <tui-radio-block
+      contentAlign="right"
+      formControlName="maritalStatus"
+      item="married"
+      size="l"
+    >
+      Married
+    </tui-radio-block>
+  </div>
+  <span class="__divider"></span>
+  <tui-select formControlName="levelOfEducation">
+    Level of Education
+    <tui-data-list-wrapper
+      *tuiDataList
+      [items]="education"
+    ></tui-data-list-wrapper>
+  </tui-select>
+
+</form>
